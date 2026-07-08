@@ -1,0 +1,26 @@
+﻿@model IEnumerable<HelpDeskAPI.Models.Ticket>
+
+<h2>Tickets List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ticket in Model)
+        {
+            <tr>
+                <td>@ticket.Id</td>
+                <td>@ticket.Title</td>
+                <td>@ticket.Description</td>
+                <td>@ticket.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
